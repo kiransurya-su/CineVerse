@@ -56,3 +56,28 @@ It demonstrates the **core principles of Object-Oriented Programming (OOP)** —
 ---
 
 ## 🧮 User Menu
+1. Add Production
+2. Add Movie to Production
+3. Show All Productions and Movies
+4. Search Movie by Name
+5. Show Movies by Director
+6. Show All Movies under a Production
+7. Show Total Movie Count
+8. Save and Exit
+
+
+---
+
+## 💾 File Handling & Serialization
+- **Serialization** saves all data (`Production`, `Movie`, `Person` objects) into `productions_data.ser`.  
+- **Deserialization** loads them when the program starts again.  
+
+Example:
+```java
+try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(FILE_NAME))) {
+    oos.writeObject(productions);
+} catch (IOException e) {
+    System.out.println("Error saving: " + e.getMessage());
+}
+```
+
